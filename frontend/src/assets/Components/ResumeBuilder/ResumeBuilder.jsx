@@ -218,6 +218,10 @@ const ResumeBuilder = () => {
       alert('Failed to generate resume. Please try again.');
     }
     setIsGenerating(false);
+    const handleATSScore = () => {
+  // placeholder
+    alert("ATS Score feature coming soon! (API not connected)");
+};
   };
 
   return (
@@ -316,6 +320,13 @@ const ResumeBuilder = () => {
         disabled={isGenerating || !profileData.name}
       >
         {isGenerating ? 'Generating...' : 'Download Resume'}
+      </button>
+      <button 
+      className="ats-btn"
+      onClick={handleATSScore}
+      disabled={!profileData.name}
+      >
+      Check ATS Score
       </button>
     </div>
   );
